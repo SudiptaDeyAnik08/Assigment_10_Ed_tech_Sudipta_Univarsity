@@ -1,0 +1,30 @@
+.loginBag{
+    background-color: whitesmoke;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 40px;
+}
+
+.form{
+    width: 40%;
+    margin: 0 auto;
+    border: 1px solid rgb(180, 175, 175);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form:hover{
+    border: 2px solid rgb(0, 255, 242);
+}
+
+.usernameInput{
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+}
+
+.loginWithOther{
+    width: 40%;
+    padding-top: 5px;
+    margin: 0 auto;
+}

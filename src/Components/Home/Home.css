@@ -1,0 +1,6 @@
+.backgroundimage{
+    background-image: url('../../assetes/slider-2.webp');
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-top: 220px;
+}
