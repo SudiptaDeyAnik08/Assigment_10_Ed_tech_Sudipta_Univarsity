@@ -5,9 +5,12 @@ import { Button, Col } from 'react-bootstrap';
 import { FaGoogle } from "react-icons/fa6";
 import { SiGnuprivacyguard } from "react-icons/si";
 import { AuthenticationProviderAPI } from '../ContextAPI/AuthProvider/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 function Login() {
 
-    const {siginUser} = useContext(AuthenticationProviderAPI);
+    const {siginUser,loginWithGoogle} = useContext(AuthenticationProviderAPI);
+    
+    const provider = new GoogleAuthProvider()
     const navigate = useNavigate()
 
     const hendleLogin = (e) => {
@@ -31,7 +34,14 @@ function Login() {
     }
 
     const handelLoginWithGoogle = () => {
-
+        loginWithGoogle(provider)
+        .then(result =>{
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(e =>{
+            console.log(e);
+        })
     }
 
     return (

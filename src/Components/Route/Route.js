@@ -20,7 +20,8 @@ export const route = createBrowserRouter([
             },
             {
                 path:"/course",
-                element:<PrivateRoute><Course></Course></PrivateRoute>
+                element:<PrivateRoute><Course></Course></PrivateRoute>,
+                loader:()=> fetch("https://assigment-10-ed-tech-server-7cx9p0f10.vercel.app/course")
             },
             {
                 path:"/blog",

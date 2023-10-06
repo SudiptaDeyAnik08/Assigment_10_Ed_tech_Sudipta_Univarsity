@@ -41,14 +41,16 @@ function NavBar() {
                     <img src={logo} className=' logoImage' alt="" />
                     <h1 className='font-bold	mt-5 ms-5 text-5xl	'><span className='text-sky-950 	'>Sudipta</span> Univarsity</h1>
                 </div>
-                <div className='pt-10 text-xl'>
+                <div className='pt-10 text-xl flex'>
                     <Link className='p-3' to='/'>Home</Link>
                     <Link className='p-3' to='/course'>Course</Link>
                     <Link className='p-3' to='/blog'>Blog</Link>
                     {
                         user?.uid ?
-                            <> <span>{user?.displayName}</span>
-                                <button onClick={handleLogOut}>LogOut</button>
+                            <> 
+                            <img src={user?.photoURL} className='ProfileImage	rounded-lg	'></img>
+                            <span>{user?.displayName}</span>
+                                <button onClick={handleLogOut} className='border-2	p-3 ms-3 mb-2 me-4 '>LogOut</button>
 
                             </>
                             :
